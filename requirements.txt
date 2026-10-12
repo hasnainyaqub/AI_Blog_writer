@@ -1,0 +1,17 @@
+
+# API Framework
+fastapi
+uvicorn[standard]
+
+# Data Validation
+pydantic
+pydantic-settings
+
+# LLM and AI Workflow
+langchain
+langchain-core
+langchain-groq
+langgraph
+
+# Environment Variables
+python-dotenv
