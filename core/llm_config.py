@@ -10,6 +10,5 @@ llm = ChatGroq(
 
 llm_content = ChatGroq(
     model='openai/gpt-oss-20b',
-    temperature=0.5, 
-    max_tokens=1500
+    temperature=0.5
 )
