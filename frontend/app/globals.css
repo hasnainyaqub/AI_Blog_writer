@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* ─── Theme tokens (Tailwind v4 @theme) ──────────────── */
+@theme {
+  --font-newsreader: var(--font-newsreader, Georgia, serif);
+  --font-inter: var(--font-inter, system-ui, sans-serif);
+  --font-sans: var(--font-inter, system-ui, sans-serif);
+
+  --color-bg: #F3F5F8;
+  --color-card: #FFFFFF;
+  --color-border: #E3E6EC;
+  --color-ink: #101828;
+  --color-body: #344054;
+  --color-muted: #5B6475;
+  --color-accent: #2F4BD0;
+  --color-accent-tint: #EEF1FD;
+  --color-success: #1A7F5A;
+  --color-input-border: #D0D5DD;
+
+  --animate-progress: progress 8s ease-out forwards;
+}
+
+/* ─── Progress bar animation ─────────────────────────── */
+@keyframes progress {
+  0%   { width: 0%; }
+  50%  { width: 70%; }
+  80%  { width: 85%; }
+  100% { width: 92%; }
+}
+
+/* ─── Base styles ─────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F3F5F8;
+  color: #344054;
+  font-family: var(--font-inter, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Font utilities ──────────────────────────────────── */
+.font-newsreader {
+  font-family: var(--font-newsreader, Georgia, "Times New Roman", serif);
+}
+
+/* ─── Ensure hidden panels stay hidden (prevent content-visibility flash) ── */
+[hidden] {
+  display: none !important;
+}
+
+/* ─── Focus ring ──────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #2F4BD0;
+  outline-offset: 2px;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #D0D5DD;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }
+
+/* ─── Selection colour ────────────────────────────────── */
+::selection {
+  background: #C4CAFE;
+  color: #101828;
+}
+
+/* ─── Line-clamp utility ──────────────────────────────── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
